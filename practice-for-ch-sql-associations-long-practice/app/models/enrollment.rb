@@ -17,7 +17,7 @@ class Enrollment < ApplicationRecord
         class_name: :User, 
         dependent: :destroy 
 
-    belongs_to :course
+    belongs_to :course,
         primary_key: :id, 
         foreign_key: :student_id, 
         class_name: :Course, 
