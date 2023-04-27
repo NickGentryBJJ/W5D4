@@ -16,4 +16,10 @@ class User < ApplicationRecord
         class_name: :Enrollment,
         dependent: :destroy  
 
+    has_many :enrolled_courses,
+        primary_key: :id,
+        foreign_key: :course_id,
+        class_name: :Enrollment,
+        dependent: :destroy
+
 end
